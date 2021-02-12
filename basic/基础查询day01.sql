@@ -27,9 +27,6 @@ SELECT
     `first_name`,
     `last_name`,
     `phone_number`,
-    `last_name`,
-    `job_id`,
-    `phone_number`,
     `job_id`,
     `salary`,
     `commission_pct`,
@@ -66,13 +63,11 @@ SELECT last_name AS 姓,first_name AS 名 FROM employees;
 #方式二：使用空格
 SELECT last_name 姓,first_name 名 FROM employees;
 
-
 #案例：查询salary，显示结果为 out put
 SELECT salary AS "out put" FROM employees;
 
 
 #8.去重
-
 #案例：查询员工表中涉及到的所有的部门编号
 SELECT DISTINCT department_id FROM employees;
 

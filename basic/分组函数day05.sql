@@ -18,7 +18,6 @@ sum 求和、avg 平均值、max 最大值 、min 最小值 、count 计算个�
 5、和分组函数一同查询的字段要求是group by后的字段
 */
 
-
 #1、简单 的使用
 SELECT SUM(salary) FROM employees;
 SELECT AVG(salary) FROM employees;
@@ -60,18 +59,17 @@ SELECT SUM(DISTINCT salary),SUM(salary) FROM employees;
 SELECT COUNT(DISTINCT salary),COUNT(salary) FROM employees;
 
 
+/*
+效率：
+MYISAM存储引擎下，COUNT(*)的效率高
+INNODB存储引擎下，COUNT(*)和COUNT(1)的效率差不多，比COUNT(字段)要高一些
+*/
 #5、count函数的详细介绍
 SELECT COUNT(salary) FROM employees;
 
 SELECT COUNT(*) FROM employees;
 
 SELECT COUNT(1) FROM employees;
-
-/*
-效率：
-MYISAM存储引擎下  ，COUNT(*)的效率高
-INNODB存储引擎下，COUNT(*)和COUNT(1)的效率差不多，比COUNT(字段)要高一些
-*/
 
 
 #6、和分组函数一同查询的字段有限制

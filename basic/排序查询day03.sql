@@ -22,7 +22,7 @@ SELECT * FROM employees ORDER BY salary DESC;
 #案例：查询部门编号>=90的员工信息，并按员工编号降序
 SELECT *
 FROM employees
-WHERE department_id>=90
+WHERE department_id >= 90
 ORDER BY employee_id DESC;
 
 #3、按表达式排序

@@ -74,18 +74,18 @@ SELECT UPPER('john');
 SELECT LOWER('joHn');
 
 #示例：将姓变大写，名变小写，然后拼接
-SELECT CONCAT(UPPER(last_name),LOWER(first_name))  姓名 FROM employees;
+SELECT CONCAT(UPPER(last_name),LOWER(first_name)) 姓名 FROM employees;
 
 #4.substr、substring
 注意：索引从1开始
 #截取从指定索引处后面所有字符
-SELECT SUBSTR('李莫愁爱上了陆展元',7)  out_put;
+SELECT SUBSTR('李莫愁爱上了陆展元',7) out_put;
 
 #截取从指定索引处指定字符长度的字符
 SELECT SUBSTR('李莫愁爱上了陆展元',1,3) out_put;
 
 #案例：姓名中首字符大写，其他字符小写然后用_拼接，显示出来
-SELECT CONCAT(UPPER(SUBSTR(last_name,1,1)),'_',LOWER(SUBSTR(last_name,2)))  out_put
+SELECT CONCAT(UPPER(SUBSTR(last_name,1,1)),'_',LOWER(SUBSTR(last_name,2))) out_put
 FROM employees;
 
 #5.instr 返回子串第一次出现的索引，如果找不到返回0
@@ -94,14 +94,13 @@ SELECT INSTR('杨不悔爱上了殷六侠','殷六侠') AS out_put;
 #6.trim
 SELECT LENGTH(TRIM('    张翠山    ')) AS out_put;
 
-SELECT TRIM('a' FROM 'aaaaaaaaa张aaaaaaaaaaaa翠山aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')  AS out_put;
+SELECT TRIM('a' FROM 'aaaaaaaaa张aaaaaaaaaaaa翠山aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa') AS out_put;
 
 #7.lpad 用指定的字符实现左填充指定长度
 SELECT LPAD('殷素素',2,'*') AS out_put;
 
 #8.rpad 用指定的字符实现右填充指定长度
 SELECT RPAD('殷素素',12,'ab') AS out_put;
-
 
 #9.replace 替换
 SELECT REPLACE('周芷若周芷若周芷若周芷若张无忌爱上了周芷若','周芷若','赵敏') AS out_put;
@@ -142,7 +141,7 @@ SELECT CURTIME();
 SELECT YEAR(NOW()) 年;
 SELECT YEAR('1998-1-1') 年;
 
-SELECT  YEAR(hiredate) 年 FROM employees;
+SELECT YEAR(hiredate) 年 FROM employees;
 
 SELECT MONTH(NOW()) 月;
 SELECT MONTHNAME(NOW()) 月;
@@ -151,7 +150,7 @@ SELECT MONTHNAME(NOW()) 月;
 #str_to_date 将字符通过指定的格式转换成日期
 SELECT STR_TO_DATE('1998-3-2','%Y-%c-%d') AS out_put;
 
-#查询入职日期为1992--4-3的员工信息
+#查询入职日期为1992-4-3的员工信息
 SELECT * FROM employees WHERE hiredate = '1992-4-3';
 
 SELECT * FROM employees WHERE hiredate = STR_TO_DATE('4-3 1992','%c-%d %Y');
@@ -185,7 +184,6 @@ FROM employees;
 
 
 #2.case函数的使用一： switch case 的效果
-
 /*
 java中：
 switch(变量或表达式){
@@ -203,13 +201,13 @@ else 要显示的值n或语句n;
 end
 */
 
-/*案例：查询员工的工资，要求
+/*
+案例：查询员工的工资，要求
 
 部门号=30，显示的工资为1.1倍
 部门号=40，显示的工资为1.2倍
 部门号=50，显示的工资为1.3倍
 其他部门，显示的工资为原工资
-
 */
 SELECT salary 原始工资,department_id,
 CASE department_id
@@ -242,7 +240,6 @@ when 条件2 then 要显示的值2或语句2
 else 要显示的值n或语句n
 end
 */
-
 #案例：查询员工的工资的情况
 /*
 如果工资>20000,显示A级别

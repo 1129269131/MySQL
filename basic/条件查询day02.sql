@@ -30,7 +30,6 @@
 		is null
 */
 #一、按条件表达式筛选
-
 #案例1：查询工资>12000的员工信息
 SELECT 
 	*
@@ -50,8 +49,7 @@ WHERE
 
 
 #二、按逻辑表达式筛选
-
-#案例1：查询工资z在10000到20000之间的员工名、工资以及奖金
+#案例1：查询工资在10000到20000之间的员工名、工资以及奖金
 SELECT
 	last_name,
 	salary,
@@ -123,7 +121,7 @@ WHERE
 	
 #2.between and
 /*
-①使用between and 可以提高语句的简洁度
+①使用 between and 可以提高语句的简洁度
 ②包含临界值
 ③两个临界值不要调换顺序
 */
@@ -191,7 +189,7 @@ WHERE
 	commission_pct IS NOT NULL;
 	
 	
-#安全等于  <=>
+#安全等于：<=>
 #案例1：查询没有奖金的员工名和奖金率
 SELECT
 	last_name,
@@ -199,7 +197,7 @@ SELECT
 FROM
 	employees
 WHERE
-	commission_pct <=>NULL;
+	commission_pct <=> NULL;
 	
 #案例2：查询工资为12000的员工信息
 SELECT
