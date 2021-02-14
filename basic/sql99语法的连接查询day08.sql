@@ -35,7 +35,7 @@ on 连接条件;
 特点：
 ①添加排序、分组、筛选
 ②inner可以省略
-③ 筛选条件放在where后面，连接条件放在on后面，提高分离性，便于阅读
+③筛选条件放在where后面，连接条件放在on后面，提高分离性，便于阅读
 ④inner join连接和sql92语法中的等值连接效果是一样的，都是查询多表的交集
 */
 #1、等值连接
@@ -49,7 +49,7 @@ ON e.`department_id` = d.`department_id`;
 SELECT last_name,job_title
 FROM employees e
 INNER JOIN jobs j
-ON e.`job_id`=  j.`job_id`
+ON e.`job_id` = j.`job_id`
 WHERE e.`last_name` LIKE '%e%';
 
 #案例3. 查询部门个数>3的城市名和部门个数，（添加分组+筛选）

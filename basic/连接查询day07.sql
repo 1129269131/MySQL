@@ -8,7 +8,6 @@
 如何避免：添加有效的连接条件
 
 分类：
-
 	按年代分类：
 	sql92标准:仅仅支持内连接
 	sql99标准【推荐】：支持内连接+外连接（左外和右外）+交叉连接
@@ -62,7 +61,7 @@ WHERE employees.`department_id`=departments.`department_id`;
 */
 #查询员工名、工种号、工种名
 SELECT e.last_name,e.job_id,j.job_title
-FROM employees  e,jobs j
+FROM employees e,jobs j
 WHERE e.`job_id`=j.`job_id`;
 
 

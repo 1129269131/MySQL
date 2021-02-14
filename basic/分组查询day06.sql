@@ -12,10 +12,10 @@ group by 分组的字段
 特点：
 1、和分组函数一同查询的字段必须是group by后出现的字段
 2、筛选分为两类：分组前筛选和分组后筛选
-		针对的表			位置		连接的关键字
+			针对的表			位置		连接的关键字
 分组前筛选	原始表				group by前	where
 	
-分组后筛选	group by后的结果集    		group by后	having
+分组后筛选	group by后的结果集  group by后	having
 
 问题1：分组函数做筛选能不能放在where后面
 答：不能
@@ -64,7 +64,7 @@ SELECT COUNT(*),department_id
 FROM employees
 GROUP BY department_id;
 
-#② 筛选刚才①结果
+#②筛选刚才①结果
 SELECT COUNT(*),department_id
 FROM employees
 
@@ -80,9 +80,9 @@ GROUP BY job_id
 HAVING MAX(salary)>12000;
 
 #案例3：领导编号>102的每个领导手下的最低工资大于5000的领导编号和最低工资
-manager_id>102
 SELECT manager_id,MIN(salary)
 FROM employees
+WHERE manager_id>102
 GROUP BY manager_id
 HAVING MIN(salary)>5000;
 
