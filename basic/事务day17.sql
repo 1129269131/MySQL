@@ -76,7 +76,6 @@ SHOW VARIABLES LIKE 'autocommit';
 SHOW ENGINES;
 
 #1.演示事务的使用步骤
-
 #开启事务
 SET autocommit=0;
 START TRANSACTION;

@@ -30,8 +30,8 @@
 		
 主键和唯一的大对比：
 		保证唯一性  是否允许为空    一个表中可以有多少个   是否允许组合
-	主键	√		×				至多有1个           	√，但不推荐
-	唯一	√		√				可以有多个          	√，但不推荐
+	主键	√			×				至多有1个           √，但不推荐
+	唯一	√			√				可以有多个          √，但不推荐
 	
 外键：
 	1、要求在从表设置外键关系
@@ -45,7 +45,6 @@ CREATE TABLE 表名(
 	字段名 字段类型 列级约束,
 	字段名 字段类型,
 	表级约束
-
 )
 CREATE DATABASE students;
 #一、创建表时添加约束
@@ -99,7 +98,6 @@ CREATE TABLE stuinfo(
 
 SHOW INDEX FROM stuinfo;
 
-
 #通用的写法：★
 CREATE TABLE IF NOT EXISTS stuinfo(
 	id INT PRIMARY KEY,
@@ -132,8 +130,10 @@ CREATE TABLE stuinfo(
 DESC stuinfo;
 #1.添加非空约束
 ALTER TABLE stuinfo MODIFY COLUMN stuname VARCHAR(20)  NOT NULL;
+
 #2.添加默认约束
 ALTER TABLE stuinfo MODIFY COLUMN age INT DEFAULT 18;
+
 #3.添加主键
 #①列级约束
 ALTER TABLE stuinfo MODIFY COLUMN id INT PRIMARY KEY;
@@ -146,9 +146,9 @@ ALTER TABLE stuinfo MODIFY COLUMN seat INT UNIQUE;
 #②表级约束
 ALTER TABLE stuinfo ADD UNIQUE(seat);
 
-
 #5.添加外键
 ALTER TABLE stuinfo ADD CONSTRAINT fk_stuinfo_major FOREIGN KEY(majorid) REFERENCES major(id); 
+
 
 #三、修改表时删除约束
 #1.删除非空约束

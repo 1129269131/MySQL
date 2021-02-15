@@ -16,7 +16,7 @@
 1、查看所有系统变量
 show global|【session】variables;
 2、查看满足条件的部分系统变量
-show global|【session】 variables like '%char%';
+show global|【session】variables like '%char%';
 3、查看指定的系统变量的值
 select @@global|【session】系统变量名;
 4、为某个系统变量赋值
@@ -62,7 +62,6 @@ SET SESSION tx_isolation='read-committed';
 2、赋值
 3、使用（查看、比较、运算等）
 */
-
 #1》用户变量
 /*
 作用域：针对于当前会话（连接）有效，作用域同于会话变量

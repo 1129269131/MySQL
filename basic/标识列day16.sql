@@ -10,7 +10,6 @@
 4、标识列可以通过 SET auto_increment_increment=3;设置步长
 可以通过 手动插入值，设置起始值
 */
-
 #一、创建表时设置标识列
 DROP TABLE IF EXISTS tab_identity;
 CREATE TABLE tab_identity(

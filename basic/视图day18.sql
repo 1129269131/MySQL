@@ -43,7 +43,6 @@ FROM employees e
 JOIN departments d ON e.department_id  = d.department_id
 JOIN jobs j ON j.job_id  = e.job_id;
 
-
 #②使用
 SELECT * FROM myv1 WHERE last_name LIKE '%a%';
 
@@ -65,6 +64,7 @@ ON myv2.`ag` BETWEEN g.`lowest_sal` AND g.`highest_sal`;
 
 #3.查询平均工资最低的部门信息
 SELECT * FROM myv2 ORDER BY ag LIMIT 1;
+
 
 #4.查询平均工资最低的部门名和工资
 CREATE VIEW myv3
@@ -150,6 +150,7 @@ SELECT * FROM myv1;
 
 #更新
 UPDATE myv1 SET m=9000 WHERE department_id=10;
+
 #②常量视图
 CREATE OR REPLACE VIEW myv2
 AS
@@ -160,7 +161,6 @@ SELECT * FROM myv2;
 
 #更新
 UPDATE myv2 SET NAME='lucy';
-
 
 #③Select中包含子查询
 CREATE OR REPLACE VIEW myv3

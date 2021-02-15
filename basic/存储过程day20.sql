@@ -16,7 +16,6 @@
 #一、创建语法
 CREATE PROCEDURE 存储过程名(参数列表)
 BEGIN
-
 	存储过程体（一组合法的SQL语句）
 END
 
@@ -68,8 +67,6 @@ BEGIN
 	FROM boys bo
 	RIGHT JOIN beauty b ON bo.id = b.boyfriend_id
 	WHERE b.name=beautyName;
-	
-
 END $
 
 #调用
@@ -107,7 +104,7 @@ END $
 #案例2：根据输入的女神名，返回对应的男神名和魅力值
 CREATE PROCEDURE myp7(IN beautyName VARCHAR(20),OUT boyName VARCHAR(20),OUT usercp INT) 
 BEGIN
-	SELECT boys.boyname ,boys.usercp INTO boyname,usercp
+	SELECT boys.boyname,boys.usercp INTO boyname,usercp
 	FROM boys 
 	RIGHT JOIN
 	beauty b ON b.boyfriend_id = boys.id

@@ -16,7 +16,7 @@
 /*
 分类：
 tinyint、smallint、mediumint、int/integer、bigint
-1	 2		3	4		8
+   1	    2		  3			 4		     8
 
 特点：
 ① 如果不设置无符号还是有符号，默认是有符号，如果想设置无符号，需要添加unsigned关键字
@@ -67,7 +67,6 @@ M和D都可以省略
 ③定点型的精确度较高，如果要求插入数值的精度较高如货币运算等则考虑使用
 */
 #测试M和D
-
 DROP TABLE tab_float;
 CREATE TABLE tab_float(
 	f1 FLOAT,
@@ -91,16 +90,13 @@ INSERT INTO tab_float VALUES(1523.4,1523.4,1523.4);
 #三、字符型
 /*
 较短的文本：
-
 char
 varchar
 
 其他：
-
 binary和varbinary用于保存较短的二进制
 enum用于保存枚举
 set用于保存集合
-
 
 较长的文本：
 text
@@ -136,7 +132,7 @@ INSERT INTO tab_set VALUES('a,c,d');
 /*
 分类：
 date只保存日期
-time 只保存时间
+time只保存时间
 year只保存年
 
 datetime保存日期+时间
