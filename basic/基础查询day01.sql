@@ -14,11 +14,12 @@ select 查询列表 from 表名;
 USE myemployees;
 
 #1.查询表中的单个字段
-
 SELECT last_name FROM employees;
+
 
 #2.查询表中的多个字段
 SELECT last_name,salary,email FROM employees;
+
 
 #3.查询表中的所有字段
 #方式一：
@@ -44,8 +45,10 @@ FROM
 SELECT 100;
 SELECT 'john';
  
+ 
 #5.查询表达式
 SELECT 100%98;
+ 
  
 #6.查询函数
 SELECT VERSION();

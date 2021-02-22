@@ -11,7 +11,6 @@
 修改： alter
 删除： drop
 */
-
 #一、库的管理
 #1、库的创建
 /*
@@ -122,7 +121,6 @@ CREATE TABLE copy3
 SELECT id,au_name
 FROM author 
 WHERE nation='中国';
-
 
 #仅仅复制某些字段
 CREATE TABLE copy4 

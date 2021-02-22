@@ -54,6 +54,7 @@ SELECT @@session.tx_isolation;
 SET @@session.tx_isolation='read-uncommitted';
 SET SESSION tx_isolation='read-committed';
 
+
 #二、自定义变量
 /*
 说明：变量由用户自定义，而不是系统提供的

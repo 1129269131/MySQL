@@ -103,6 +103,7 @@ ALTER VIEW myv3
 AS
 SELECT * FROM employees;
 
+
 #三、删除视图
 /*
 语法：drop view 视图名,视图名,...;

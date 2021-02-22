@@ -12,7 +12,6 @@
 2、简化操作
 3、减少了编译次数并且减少了和数据库服务器的连接次数，提高了效率
 */
-
 #一、创建语法
 CREATE PROCEDURE 存储过程名(参数列表)
 BEGIN
@@ -39,6 +38,7 @@ delimiter 结束标记
 案例：
 delimiter $
 */
+
 
 #二、调用语法
 CALL 存储过程名(实参列表);
@@ -136,6 +136,7 @@ SELECT @m,@n$
 #语法：drop procedure 存储过程名
 DROP PROCEDURE p1;
 DROP PROCEDURE p2,p3;#×
+
 
 #四、查看存储过程的信息
 DESC myp2;×

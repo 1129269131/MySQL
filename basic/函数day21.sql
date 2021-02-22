@@ -9,7 +9,6 @@
 存储过程：可以有0个返回，也可以有多个返回，适合做批量插入、批量更新
 函数：有且仅有1个返回，适合做处理数据后返回一个结果
 */
-
 #一、创建语法
 CREATE FUNCTION 函数名(参数列表) RETURNS 返回类型
 BEGIN
@@ -27,6 +26,7 @@ return 值;
 3.函数体中仅有一句话，则可以省略begin end
 4.使用delimiter语句设置结束标记
 */
+
 
 #二、调用语法
 SELECT 函数名(参数列表)
@@ -73,8 +73,10 @@ END $
 
 SELECT myf3('IT')$
 
+
 #三、查看函数
 SHOW CREATE FUNCTION myf3;
+
 
 #四、删除函数
 DROP FUNCTION myf3;

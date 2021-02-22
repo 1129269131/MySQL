@@ -20,8 +20,8 @@
 		and or not
 		
 	&&和and：两个条件都为true，结果为true，反之为false
-	||或or： 只要有一个条件为true，结果为true，反之为false
-	!或not： 如果连接的条件本身为false，结果为true，反之为false
+	||或or：只要有一个条件为true，结果为true，反之为false
+	!或not：如果连接的条件本身为false，结果为true，反之为false
 	
 	三、模糊查询
 		like

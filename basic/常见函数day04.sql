@@ -1,5 +1,4 @@
 ﻿#进阶4：常见函数
-
 /*
 概念：类似于java的方法，将一组逻辑语句封装在方法体中，对外暴露方法名
 好处：1、隐藏了实现细节  2、提高代码的重用性
@@ -48,10 +47,12 @@
 	second
 	str_to_date
 	date_format
+	
 	其他函数：
 	version
 	database
 	user
+	
 	控制函数
 	if
 	case
