@@ -186,13 +186,13 @@ FROM employees;
 SELECT last_name,salary,CASE WHEN salary >= 15000 THEN '白骨精' 
 			     WHEN salary >= 10000 THEN '潜力股'
 			     WHEN salary >= 8000 THEN '小屌丝'
-			     ELSE '草根' END "details",department_id
+			     ELSE '草根' END "details"
 FROM employees;
 
 SELECT last_name,salary,CASE WHEN salary >= 15000 THEN '白骨精' 
 			     WHEN salary >= 10000 THEN '潜力股'
 			     WHEN salary >= 8000 THEN '小屌丝'
-			     END "details"
+			     END "details",department_id
 FROM employees;
 
 #4.4 CASE ... WHEN ... THEN ... WHEN ... THEN ... ELSE ... END

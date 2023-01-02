@@ -239,6 +239,7 @@ SELECT employee_id,last_name,department_name
 FROM employees e NATURAL JOIN departments d;
 
 #11. SQL99语法的新特性2:USING
+# 推荐使用这种
 SELECT employee_id,last_name,department_name
 FROM employees e JOIN departments d
 ON e.department_id = d.department_id;
@@ -249,6 +250,6 @@ USING (department_id);
 
 #拓展（不推荐使用）：
 SELECT last_name,job_title,department_name 
-FROM employees INNER JOIN departments INNER JOIN jobs 
-ON employees.department_id = departments.department_id 
-AND employees.job_id = jobs.job_id;
+FROM employees emp INNER JOIN departments dept INNER JOIN jobs jb
+ON emp.department_id = dept.department_id 
+AND emp.job_id = jb.job_id;

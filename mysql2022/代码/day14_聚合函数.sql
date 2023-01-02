@@ -69,6 +69,7 @@ GROUP BY job_id;
 SELECT department_id,job_id,AVG(salary)
 FROM employees
 GROUP BY department_id,job_id;
+
 #方式2：
 SELECT job_id,department_id,AVG(salary)
 FROM employees
@@ -81,9 +82,7 @@ GROUP BY department_id;
 
 #结论1：SELECT中出现的非组函数的字段必须声明在GROUP BY 中。
 #      反之，GROUP BY中声明的字段可以不出现在SELECT中。
-
 #结论2：GROUP BY 声明在FROM后面、WHERE后面，ORDER BY 前面、LIMIT前面
-
 #结论3：MySQL中GROUP BY中使用WITH ROLLUP
 SELECT department_id,AVG(salary)
 FROM employees
@@ -112,7 +111,6 @@ GROUP BY department_id;
 
 #要求1：如果过滤条件中使用了聚合函数，则必须使用HAVING来替换WHERE。否则，报错。
 #要求2：HAVING 必须声明在 GROUP BY 的后面。
-
 #正确的写法：
 SELECT department_id,MAX(salary)
 FROM employees
@@ -155,7 +153,6 @@ HAVING 包含聚合函数的过滤条件
 ORDER BY ....,...(ASC / DESC)
 LIMIT ...,....
 
-
 #sql99语法：
 SELECT ....,....,....(存在聚合函数)
 FROM ... (LEFT / RIGHT)JOIN ....ON 多表的连接条件 
@@ -168,7 +165,7 @@ LIMIT ...,....
 */
 
 #4.2 SQL语句的执行过程：
-#FROM ...,...-> ON -> (LEFT/RIGHT JOIN) -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> 
+# FROM ...,...-> ON -> (LEFT/RIGHT JOIN) -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> 
 # ORDER BY -> LIMIT
 
 

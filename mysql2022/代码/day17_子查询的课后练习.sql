@@ -115,7 +115,7 @@ FROM departments d,(
 		FROM employees
 		GROUP BY department_id
 		ORDER BY avg_sal ASC
-		LIMIT 0,1
+		LIMIT 1
 		) t_dept_avg_sal
 WHERE d.`department_id` = t_dept_avg_sal.department_id
 
@@ -127,7 +127,7 @@ WHERE d.`department_id` = (
 						   FROM employees
 						   GROUP BY department_id
 						   ORDER BY AVG(salary) ASC
-						   LIMIT 0,1
+						   LIMIT 1
 						  )
 		
 #9.查询平均工资最低的部门信息和该部门的平均工资（相关子查询）
@@ -198,7 +198,7 @@ WHERE d.`department_id` = (
 						   FROM employees
 						   GROUP BY department_id
 						   ORDER BY AVG(salary) ASC
-						   LIMIT 0,1
+						   LIMIT 1
 						  )
 
 #10.查询平均工资最高的 job 信息
@@ -245,7 +245,7 @@ WHERE job_id = (
 				     FROM employees
 				     GROUP BY job_id
 				     ORDER BY avg_sal DESC
-				     LIMIT 0,1
+				     LIMIT 1
 				     )
 		);
 
@@ -256,7 +256,7 @@ FROM jobs j,(
 		FROM employees
 		GROUP BY job_id
 		ORDER BY avg_sal DESC
-		LIMIT 0,1		
+		LIMIT 1		
 		) t_job_avg_sal
 WHERE j.job_id = t_job_avg_sal.job_id
 
@@ -268,7 +268,7 @@ WHERE j.job_id = (
 				FROM employees
 				GROUP BY job_id
 				ORDER BY AVG(salary) DESC
-				LIMIT 0,1	
+				LIMIT 1	
 				)
 		
 #11.查询平均工资高于公司平均工资的部门有哪些?
@@ -350,7 +350,7 @@ WHERE department_id = (
 						FROM employees
 						GROUP BY department_id
 						ORDER BY max_sal ASC
-						LIMIT 0,1
+						LIMIT 1
 						)
 			);
 			
@@ -361,7 +361,7 @@ FROM employees e,(
 		FROM employees
 		GROUP BY department_id
 		ORDER BY max_sal ASC
-		LIMIT 0,1
+		LIMIT 1
 		) t_dept_max_sal
 WHERE e.department_id = t_dept_max_sal.department_id
 
@@ -373,7 +373,7 @@ WHERE e.department_id = (
 						FROM employees
 						GROUP BY department_id
 						ORDER BY MAX(salary) ASC
-						LIMIT 0,1
+						LIMIT 1
 						)
 
 #14.查询平均工资最高的部门的 manager 的详细信息: last_name, department_id, email, salary
@@ -447,7 +447,7 @@ WHERE employee_id IN ( #此处可以使用ANY实现
 					FROM employees
 					GROUP BY department_id
 					ORDER BY avg_sal DESC
-					LIMIT 0,1
+					LIMIT 1
 					) t_dept_avg_sal
 			WHERE e.`department_id` = t_dept_avg_sal.department_id
 			);
@@ -463,7 +463,7 @@ WHERE employee_id IN ( #此处可以使用ANY实现
 									   FROM employees
 									   GROUP BY department_id
 									   ORDER BY AVG(salary) DESC
-									   LIMIT 0,1
+									   LIMIT 1
 									  )
 			);
 

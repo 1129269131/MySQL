@@ -18,7 +18,6 @@ SQL的规范  ---建议遵守
   - 数据库名、表名、表别名、字段名、字段别名等都小写
   - SQL 关键字、函数名、绑定变量等都大写
 */
-
 SELECT * FROM emp;
 
 INSERT INTO emp 

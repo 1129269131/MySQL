@@ -40,7 +40,6 @@ WHERE DATEDIFF(CURDATE(),hire_date) >= 10000;
 
 # 8.做一个查询，产生下面的结果
 #<last_name> earns <salary> monthly but wants <salary*3> 
-
 SELECT CONCAT(last_name,' earns ',TRUNCATE(salary,0), ' monthly but wants ',TRUNCATE(salary * 3,0)) "Dream Salary"
 FROM employees;
 

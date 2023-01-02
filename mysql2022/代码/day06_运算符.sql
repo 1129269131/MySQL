@@ -82,7 +82,7 @@ SELECT last_name,salary,commission_pct
 FROM employees
 WHERE NOT commission_pct <=> NULL;
 
-#② LEAST() \ GREATEST 
+#② LEAST() \ GREATEST ：对于字符型数据而言比较的是字符的大小，而不是字符长度的大小
 SELECT LEAST('g','b','t','m'),GREATEST('g','b','t','m')
 FROM DUAL;
 
@@ -90,7 +90,7 @@ FROM DUAL;
 SELECT LEAST(first_name,last_name),LEAST(LENGTH(first_name),LENGTH(last_name))
 FROM employees;
 
-#③ BETWEEN 条件下界1 AND 条件上界2  （查询条件1和条件2范围内的数据，包含边界）
+#③ BETWEEN 条件下界1 AND 条件上界2  （查询条件1和条件2范围内的数据，包含边界[]）
 #查询工资在6000 到 8000的员工信息
 SELECT employee_id,last_name,salary
 FROM employees
@@ -122,7 +122,6 @@ WHERE salary NOT IN (6000,7000,8000);
 
 #⑤ LIKE :模糊查询
 # % : 代表不确定个数的字符 （0个，1个，或多个）
-
 #练习：查询last_name中包含字符'a'的员工信息
 SELECT last_name
 FROM employees
@@ -138,13 +137,13 @@ WHERE last_name LIKE 'a%';
 SELECT last_name
 FROM employees
 WHERE last_name LIKE '%a%' AND last_name LIKE '%e%';
+
 #写法2：
 SELECT last_name
 FROM employees
 WHERE last_name LIKE '%a%e%' OR last_name LIKE '%e%a%';
 
 # _ ：代表一个不确定的字符
-
 #练习：查询第3个字符是'a'的员工信息
 SELECT last_name
 FROM employees

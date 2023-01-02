@@ -47,7 +47,8 @@ SELECT employee_id,salary "月工资",salary * (1 + IFNULL(commission_pct,0)) * 
 FROM `employees`;
 
 #5. 着重号 ``
-SELECT * FROM `order`;
+SELECT * 
+FROM `order`;
 
 #6. 查询常数
 SELECT '尚硅谷',123,employee_id,last_name
