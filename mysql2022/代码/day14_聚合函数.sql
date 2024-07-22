@@ -2,6 +2,7 @@
 #1.1 AVG / SUM ：只适用于数值类型的字段（或变量）
 SELECT AVG(salary),SUM(salary),AVG(salary) * 107
 FROM employees;
+
 #如下的操作没有意义
 SELECT SUM(last_name),AVG(last_name),SUM(hire_date)
 FROM employees;
@@ -83,7 +84,7 @@ GROUP BY department_id;
 #结论1：SELECT中出现的非组函数的字段必须声明在GROUP BY 中。
 #      反之，GROUP BY中声明的字段可以不出现在SELECT中。
 #结论2：GROUP BY 声明在FROM后面、WHERE后面，ORDER BY 前面、LIMIT前面
-#结论3：MySQL中GROUP BY中使用WITH ROLLUP
+#结论3：MySQL中GROUP BY中使用WITH ROLLUP（汇总）
 SELECT department_id,AVG(salary)
 FROM employees
 GROUP BY department_id WITH ROLLUP;
@@ -165,7 +166,8 @@ LIMIT ...,....
 */
 
 #4.2 SQL语句的执行过程：
-# FROM ...,...-> ON -> (LEFT/RIGHT JOIN) -> WHERE -> GROUP BY -> HAVING -> SELECT -> DISTINCT -> 
+# FROM ...,... -> ON -> (LEFT/RIGHT JOIN) -> WHERE -> GROUP BY -> HAVING -> 
+# SELECT -> DISTINCT -> 
 # ORDER BY -> LIMIT
 
 

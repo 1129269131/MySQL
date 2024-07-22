@@ -44,7 +44,7 @@ SELECT employee_id,salary "月工资",salary * (1 + commission_pct) * 12 "年工
 FROM employees;
 #实际问题的解决方案：引入IFNULL
 SELECT employee_id,salary "月工资",salary * (1 + IFNULL(commission_pct,0)) * 12 "年工资",commission_pct
-FROM `employees`;
+FROM employees;
 
 #5. 着重号 ``
 SELECT * 
