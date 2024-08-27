@@ -1,0 +1,6 @@
+1、尚硅谷提供的高级篇课件内容缺失，希望未来可以补充完整，目前采用课件pdf文件下面放置截视频图实现课件内容的完整性
+
+学习前置：
+1、进入linux的mysql命令中
+	[root@centos100 ~]# mysql -u root -p
+	[root@centos100 ~]# 输入mysql密码
